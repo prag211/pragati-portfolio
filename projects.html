@@ -5,39 +5,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Pragati Gupta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-<body>
-  <header>
-    <nav>
-      <h1>Pragati Gupta</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><button id="darkModeToggle">🌙</button></li>
-      </ul>
-    </nav>
+<body class="bg-light text-dark">
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3">Pragati Gupta</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light btn-sm">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Analysis with R Programming</h3>
-        <p>Data analysis using R — explore patterns, insights, and data cleaning techniques.</p>
-        <a href="https://github.com/prag211/Analysis-with-R-programming" target="_blank">View on GitHub</a>
+  <main class="container py-5">
+    <h2 class="mb-4">My Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Analysis with R Programming</h5>
+            <p class="card-text">Data analysis using R — explore patterns, insights, and data cleaning techniques.</p>
+            <a href="https://github.com/prag211/Analysis-with-R-programming" class="btn btn-primary" target="_blank">View on GitHub</a>
+          </div>
+        </div>
       </div>
-      <div class="project">
-        <h3>Python Project</h3>
-        <p>Various Python-based mini projects demonstrating data manipulation and automation.</p>
-        <a href="https://github.com/prag211/Python_project" target="_blank">View on GitHub</a>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Python Project</h5>
+            <p class="card-text">Various Python-based mini projects demonstrating data manipulation and automation.</p>
+            <a href="https://github.com/prag211/Python_project" class="btn btn-primary" target="_blank">View on GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
-  <footer>
-    <p>&copy; 2025 Pragati Gupta</p>
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Pragati Gupta</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
