@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragati Gupta - My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition duration-500">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-gray-900 text-white">
+    <h1 class="text-2xl font-bold text-indigo-400">Pragati Gupta</h1>
+    <ul class="flex gap-6 text-lg">
+      <li><a href="#home" class="hover:text-indigo-400 transition">Home</a></li>
+      <li><a href="#projects" class="hover:text-indigo-400 transition">Projects</a></li>
+      <li><a href="#blog" class="hover:text-indigo-400 transition">Blog</a></li>
+      <li><a href="#contact" class="hover:text-indigo-400 transition">Contact</a></li>
+    </ul>
+    <button onclick="toggleDarkMode()" class="ml-4 text-xl hover:text-indigo-300 transition">🌙</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="p-8 text-center animate-fade-in">
+    <h2 class="text-4xl font-bold mb-4 text-indigo-500">Welcome to My Portfolio</h2>
+    <p class="text-xl mb-6">
+      I’m Pragati Gupta, an aspiring Data Scientist currently pursuing MCA in AI & ML from Chandigarh University.
+      I’m starting my journey as a Data Analyst to build strong foundations.
+    </p>
+
+    <div class="bg-white text-gray-800 dark:bg-gray-100 dark:text-gray-900 shadow-md rounded-2xl p-6 w-full max-w-3xl mx-auto hover:scale-105 transition-transform duration-300">
+      <h3 class="text-2xl font-semibold mb-2 text-indigo-600">My CU Journey</h3>
+      <p>
+        My college life at CU started off a little messy, but as I explored more, learned new skills, and pushed myself out of my comfort zone, it’s become an exciting and rewarding experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+    © 2025 Pragati Gupta
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
