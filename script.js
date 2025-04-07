@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // File: script.js
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("darkModeToggle");
@@ -6,4 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.classList.toggle("dark");
   });
 });
+
 
