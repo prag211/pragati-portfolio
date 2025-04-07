@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pragati Gupta - My Portfolio</title>
+  <meta name="description" content="Portfolio of Pragati Gupta, aspiring Data Scientist and Data Analyst based in Chandigarh University.">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes fadeIn {
@@ -15,45 +15,87 @@
     .animate-fade-in {
       animation: fadeIn 1s ease-out forwards;
     }
+
+    #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 1000;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #4338ca;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition duration-500">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center p-4 bg-gray-900 text-white">
+  <nav class="flex justify-between items-center p-4 bg-gray-900 text-white shadow-md">
     <h1 class="text-2xl font-bold text-indigo-400">Pragati Gupta</h1>
     <ul class="flex gap-6 text-lg">
-      <li><a href="index.html" class="hover:text-indigo-400 transition">Home</a></li>
+      <li><a href="index.html" class="hover:text-indigo-400 font-semibold underline">Home</a></li>
       <li><a href="projects.html" class="hover:text-indigo-400 transition">Projects</a></li>
       <li><a href="blog.html" class="hover:text-indigo-400 transition">Blog</a></li>
       <li><a href="contact.html" class="hover:text-indigo-400 transition">Contact</a></li>
-      
     </ul>
-    <button onclick="toggleDarkMode()" class="ml-4 text-xl hover:text-indigo-300 transition">🌙</button>
+    <button onclick="toggleDarkMode()" class="ml-4 text-xl hover:text-indigo-300 transition" title="Toggle Dark Mode">🌙</button>
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="p-8 text-center animate-fade-in">
-    <h2 class="text-4xl font-bold mb-4 text-indigo-500">Welcome to My Portfolio</h2>
-    <p class="text-xl mb-6">
-      I’m Pragati Gupta, an aspiring Data Scientist currently pursuing MCA in AI & ML from Chandigarh University.
-      I’m starting my journey as a Data Analyst to build strong foundations.
-    </p>
-
-    <div class="bg-white text-gray-800 dark:bg-gray-100 dark:text-gray-900 shadow-md rounded-2xl p-6 w-full max-w-3xl mx-auto hover:scale-105 transition-transform duration-300">
-      <h3 class="text-2xl font-semibold mb-2 text-indigo-600">My CU Journey</h3>
-      <p>
-        My college life at CU started off a little messy, but as I explored more, learned new skills, and pushed myself out of my comfort zone, it’s become an exciting and rewarding experience.
+  <main>
+    <section id="home" class="p-8 text-center animate-fade-in">
+      <h2 class="text-4xl font-bold mb-4 text-indigo-500">Welcome to My Portfolio</h2>
+      <p class="text-xl mb-6">
+        I’m <strong>Pragati Gupta</strong>, an aspiring <strong>Data Scientist</strong> currently pursuing <strong>MCA in AI & ML</strong> from Chandigarh University.<br/>
+        I’m starting my journey as a <strong>Data Analyst</strong> to build strong foundations.
       </p>
-    </div>
-  </section>
+
+      <div class="bg-white text-gray-800 dark:bg-gray-100 dark:text-gray-900 shadow-md rounded-2xl p-6 w-full max-w-3xl mx-auto hover:scale-105 transition-transform duration-300">
+        <h3 class="text-2xl font-semibold mb-2 text-indigo-600">My CU Journey</h3>
+        <p>
+          My college life at CU started off a little messy, but as I explored more, learned new skills, and pushed myself out of my comfort zone, it’s become an exciting and rewarding experience.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Back to Top">↑</button>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white text-center py-4 mt-10">
     © 2025 Pragati Gupta
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+      document.documentElement.classList.toggle('dark');
+    }
+
+    // Scroll-to-top button logic
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
-

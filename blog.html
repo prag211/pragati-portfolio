@@ -1,37 +1,142 @@
-<<<<<<< HEAD
-<!-- File: blog.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog - Pragati Gupta</title>
+  <meta name="description" content="Pragati Gupta's blog - sharing insights on data analytics, tech tutorials, and student life at Chandigarh University.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .blog-section {
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .blog-section {
+      background: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    .blog-card {
+      border-left: 5px solid #0d6efd;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+
+    body.dark-mode .blog-card {
+      background: #292b2c;
+      color: #fff;
+      border-left-color: #0dcaf0;
+    }
+
+    .badge-coming {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    body.dark-mode .badge-coming {
+      background-color: #f1c40f;
+    }
+  </style>
 </head>
 <body class="bg-light text-dark">
-  <header class="bg-dark text-white py-3">
+
+  <!-- Navbar -->
+  <header class="bg-dark text-white py-3 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h3">Pragati Gupta</h1>
+      <h1 class="h4 mb-0 fw-bold text-info">Pragati Gupta</h1>
       <nav>
         <ul class="nav">
           <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-info" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-          <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light btn-sm">🌙</button></li>
+          <li class="nav-item">
+            <button id="darkModeToggle" class="btn btn-outline-light btn-sm" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="container py-5">
-    <h2 class="mb-4">Blog</h2>
-    <p class="lead">Coming soon... I’ll be writing about my journey in tech, analytics, and life at CU!</p>
+
+  <!-- Main Blog Section -->
+  <main class="container py-5 fade-in">
+    <div class="blog-section">
+      <h2 class="mb-3 text-primary fw-semibold">My Blog</h2>
+      <p class="lead">🚀 Coming soon... I’ll be sharing my experiences with tech, data analytics, and life at Chandigarh University!</p>
+      <p class="fst-italic">Stay tuned for tips, tutorials, and real-world stories as I grow as a Data Analyst!</p>
+      
+      <!-- Newsletter or Contact Button -->
+      <div class="mt-4">
+        <a href="contact.html" class="btn btn-info btn-lg">📫 Contact Me / Subscribe for Updates</a>
+      </div>
+    </div>
+
+    <!-- Placeholder Blog Cards -->
+    <section class="mt-5">
+      <div class="blog-card">
+        <h4>📊 How I Started Learning Data Analytics</h4>
+        <span class="badge badge-coming">Coming Soon</span>
+        <p class="mt-2">From Excel sheets to Python dashboards — this post will cover how I began my analytics journey step-by-step.</p>
+      </div>
+
+      <div class="blog-card">
+        <h4>💡 Beginner-Friendly Projects in Python</h4>
+        <span class="badge badge-coming">Coming Soon</span>
+        <p class="mt-2">Easy yet impressive Python projects you can do as a student or beginner in data science!</p>
+      </div>
+
+      <div class="blog-card">
+        <h4>🎓 Life at Chandigarh University - My Story</h4>
+        <span class="badge badge-coming">Coming Soon</span>
+        <p class="mt-2">A glimpse into the CU campus life, tech culture, and how it’s helped me grow in AI & ML.</p>
+      </div>
+    </section>
+
+    <!-- Embedded LinkedIn Post -->
+    <section class="mt-5">
+      <h5 class="text-secondary">✨ Latest from LinkedIn</h5>
+      <div class="ratio ratio-16x9 mt-3">
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7183871898028302336" height="300" frameborder="0" allowfullscreen="" title="LinkedIn post"></iframe>
+      </div>
+    </section>
   </main>
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 Pragati Gupta</p>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Pragati Gupta. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Dark Mode Toggle
+    document.getElementById("darkModeToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

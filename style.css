@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<!-- File: style.css --!>
+/* File: style.css */
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -7,6 +7,11 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
 header nav {
   background-color: #111;
   color: #fff;
@@ -20,21 +25,32 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding-left: 0;
+  margin: 0;
 }
 
-nav ul li a, nav button {
+nav ul li a,
+nav button {
   color: #fff;
   text-decoration: none;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover,
+nav button:hover {
+  color: #90cdf4;
+}
+
+/* Main Content */
 main {
   padding: 2rem;
 }
 
+/* Project Cards */
 .projects {
   display: grid;
   gap: 2rem;
@@ -46,9 +62,16 @@ main {
   color: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -57,13 +80,27 @@ footer {
   margin-top: 2rem;
 }
 
+/* Dark Mode */
 .dark-mode {
   background-color: #121212;
   color: #f0f0f0;
 }
 
+.dark-mode nav ul li a:hover,
+.dark-mode nav button:hover {
+  color: #90cdf4;
+}
+
+.dark-mode .project {
+  background: #222;
+  color: #f0f0f0;
+}
+
 /* Animations */
-section, h2, .project {
+section,
+h2,
+.project,
+.fade-in {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s ease forwards;
@@ -74,6 +111,30 @@ section, h2, .project {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Blog Section Specific (optional override) */
+.blog-section {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .blog-section {
+  background: #1a1a1a;
+  color: #f0f0f0;
 }
 
 /* Responsive */

@@ -1,5 +1,3 @@
-
-<!-- File: contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,33 +7,81 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      color: #0d6efd;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
+      color: #0a58ca;
+    }
+
+    body.dark-mode .contact-links a {
+      color: #66b2ff;
+    }
+
+    body.dark-mode .contact-links a:hover {
+      color: #3399ff;
+    }
+  </style>
 </head>
 <body class="bg-light text-dark">
-  <header class="bg-dark text-white py-3">
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-3 shadow-sm">
     <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h3">Pragati Gupta</h1>
+      <h1 class="h4 fw-bold text-info">Pragati Gupta</h1>
       <nav>
         <ul class="nav">
           <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-          <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light btn-sm">🌙</button></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button id="darkModeToggle" class="btn btn-outline-light btn-sm" title="Toggle Dark Mode">🌙</button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="container py-5">
-    <h2 class="mb-4">Contact Me</h2>
-    <p>Connect with me on:</p>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><a href="https://www.linkedin.com/in/pragati-gupta-735bb8213" target="_blank">LinkedIn</a></li>
-      <li class="list-group-item"><a href="https://github.com/prag211" target="_blank">GitHub</a></li>
+
+  <!-- Main Content -->
+  <main class="container py-5 fade-in">
+    <h2 class="mb-4 text-primary fw-semibold">Contact Me</h2>
+    <p class="mb-3">Let's connect! You can reach me via the platforms below:</p>
+    <ul class="list-group contact-links">
+      <li class="list-group-item bg-light border-0">
+        <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/pragati-gupta-735bb8213" target="_blank">linkedin.com/in/pragati-gupta</a>
+      </li>
+      <li class="list-group-item bg-light border-0">
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/prag211" target="_blank">github.com/prag211</a>
+      </li>
     </ul>
   </main>
-  <footer class="bg-dark text-white text-center py-3">
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
     <p class="mb-0">&copy; 2025 Pragati Gupta</p>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
